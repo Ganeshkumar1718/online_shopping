@@ -19,7 +19,7 @@ const OrderDetailsPage = () => {
 
   const fetchOrder = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/orders/${id}`, {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setOrder(res.data);
@@ -32,7 +32,7 @@ const OrderDetailsPage = () => {
 
   const handleCancel = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/orders/${id}/cancel`, { reason }, {
+      await axios.put(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/${id}/cancel`, { reason }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setShowCancelModal(false);
@@ -44,7 +44,7 @@ const OrderDetailsPage = () => {
 
   const handleReturn = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/orders/${id}/return`, { reason }, {
+      await axios.put(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/${id}/return`, { reason }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setShowReturnModal(false);

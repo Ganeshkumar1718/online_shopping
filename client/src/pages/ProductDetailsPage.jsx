@@ -30,7 +30,7 @@ const ProductDetailsPage = () => {
 
   const fetchReviews = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/reviews/${id}`);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/reviews/${id}`);
       setReviews(res.data);
     } catch (err) {
       console.error('Failed to fetch reviews', err);
@@ -45,7 +45,7 @@ const ProductDetailsPage = () => {
     }
     
     try {
-      await axios.post(`http://localhost:5000/api/reviews/${id}`, 
+      await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/reviews/${id}`, 
         { rating, comment }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );

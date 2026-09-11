@@ -14,7 +14,7 @@ const OrdersPage = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/orders/myorders', {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/myorders`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setOrders(res.data);
@@ -27,7 +27,7 @@ const OrdersPage = () => {
 
   const seedMockOrders = async () => {
     try {
-      await axios.post('http://localhost:5000/api/orders/seed', {}, {
+      await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/seed`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchOrders();
