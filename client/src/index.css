@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-body: #FAF8F5;
+    --bg-card: #FFFFFF;
+    --bg-sec: #F5F1ED;
+    --bg-input: #FFFFFF;
+    --text-primary: #222222;
+    --text-heading: #171717;
+    --text-sec: #737373;
+    --text-muted: #8A8A8A;
+    --text-placeholder: #737373;
+    --btn-pri-bg: #E01A22;
+    --btn-pri-text: #FFFFFF;
+    --btn-pri-hover: #BA151C;
+    --btn-sec-bg: #F1ECE8;
+    --btn-sec-text: #222222;
+    --border-norm: #E5E1DD;
+    --border-input: #D9D4CF;
+    --nav-bg: #171717;
+    --nav-text: #FFFFFF;
+    --nav-sec: #D4D4D4;
+    --nav-hover: #F5B6C5;
+    --brand-pri: #E01A22;
+  }
+
+  .dark {
+    --bg-body: #111111;
+    --bg-card: #1A1A1A;
+    --bg-sec: #202020;
+    --bg-input: #1A1A1A;
+    --text-primary: #F5F5F5;
+    --text-heading: #FFFFFF;
+    --text-sec: #B8B8B8;
+    --text-muted: #9A9A9A;
+    --text-placeholder: #8F8F8F;
+    --btn-pri-bg: #E01A22;
+    --btn-pri-text: #FFFFFF;
+    --btn-pri-hover: #BA151C;
+    --btn-sec-bg: #292929;
+    --btn-sec-text: #F5F5F5;
+    --border-norm: #2E2E2E;
+    --border-input: #3A3A3A;
+    --nav-bg: #0A0A0A;
+    --nav-text: #FFFFFF;
+    --nav-sec: #B8B8B8;
+    --nav-hover: #F0A5B8;
+    --brand-pri: #E01A22;
+  }
+
+  body {
+    @apply text-primary bg-body font-sans transition-colors duration-300;
+  }
+}
