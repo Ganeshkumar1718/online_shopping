@@ -60,6 +60,10 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'One7 API is running' });
 });
 
+app.get('/', (req, res) => {
+  res.send('Online Shopping API is running... Please use the frontend application to interact with this API.');
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
