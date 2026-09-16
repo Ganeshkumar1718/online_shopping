@@ -7,7 +7,7 @@ const HomePage = () => {
       {/* Hero Banner */}
       <section className="relative w-full h-[70vh] bg-sec">
         <img 
-          src={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/banner.jpg`} 
+          src={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/banner.jpg`} 
           alt="Fashion Sale Banner" 
           className="w-full h-full object-cover object-top"
         />
@@ -33,10 +33,10 @@ const HomePage = () => {
           Shop By Category
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <CategoryCard title="Men" link="/products/men" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/men.jpg`} />
-          <CategoryCard title="Women" link="/products/women" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/women.jpg`} />
-          <CategoryCard title="Boys" link="/products/boys" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/boy.jpg`} />
-          <CategoryCard title="Girls" link="/products/girls" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/girl.jpg`} />
+          <CategoryCard title="Men" link="/products/men" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/men.jpg`} />
+          <CategoryCard title="Women" link="/products/women" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/women.jpg`} />
+          <CategoryCard title="Boys" link="/products/boys" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/boy.jpg`} />
+          <CategoryCard title="Girls" link="/products/girls" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/girl.jpg`} />
         </div>
       </section>
       
@@ -47,10 +47,10 @@ const HomePage = () => {
             Deals of the Day
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <ProductPlaceholder title="Men's Casual Shirt" price="899" oldPrice="1499" discount="40% OFF" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/shirt1.jpg`} />
-            <ProductPlaceholder title="Women's Floral Kurti" price="799" oldPrice="1299" discount="38% OFF" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/kurti1.jpg`} />
-            <ProductPlaceholder title="Men's Denim Jacket" price="1299" oldPrice="2499" discount="48% OFF" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/shirt2.jpg`} />
-            <ProductPlaceholder title="Women's Summer Dress" price="999" oldPrice="1999" discount="50% OFF" image={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/uploads/women1.jpg`} />
+            <ProductPlaceholder title="Men's Casual Shirt" price="899" oldPrice="1499" discount="40% OFF" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/shirt1.jpg`} />
+            <ProductPlaceholder title="Women's Floral Kurti" price="799" oldPrice="1299" discount="38% OFF" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/kurti1.jpg`} />
+            <ProductPlaceholder title="Men's Denim Jacket" price="1299" oldPrice="2499" discount="48% OFF" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/shirt2.jpg`} />
+            <ProductPlaceholder title="Women's Summer Dress" price="999" oldPrice="1999" discount="50% OFF" image={`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/women1.jpg`} />
           </div>
         </div>
       </section>

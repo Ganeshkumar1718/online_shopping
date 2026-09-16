@@ -29,7 +29,7 @@ const ProfilePage = () => {
     
     try {
       const token = localStorage.getItem('stylekart_token');
-      const res = await axios.put(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/auth/profile`, {
+      const res = await axios.put(`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/api/auth/profile`, {
         name,
         email,
         password

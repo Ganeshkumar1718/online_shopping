@@ -23,19 +23,19 @@ files.forEach(file => {
   // Replace string literals like 'http://localhost:5000/api/...'
   content = content.replace(/'http:\/\/localhost:5000(.*?)'/g, (match, p1) => {
     changed = true;
-    return `\`\${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${p1}\``;
+    return `\`\${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}${p1}\``;
   });
 
   // Replace string literals like "http://localhost:5000/uploads/..."
   content = content.replace(/\"http:\/\/localhost:5000(.*?)\"/g, (match, p1) => {
     changed = true;
-    return `\`\${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${p1}\``;
+    return `\`\${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}${p1}\``;
   });
 
   // Replace template literals like `http://localhost:5000/api/...`
   content = content.replace(/\`http:\/\/localhost:5000(.*?)\`/g, (match, p1) => {
     changed = true;
-    return `\`\${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${p1}\``;
+    return `\`\${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}${p1}\``;
   });
 
   if (changed) {

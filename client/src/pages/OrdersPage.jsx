@@ -14,7 +14,7 @@ const OrdersPage = () => {
 
   const fetchOrders = React.useCallback(async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/myorders`, {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/api/orders/myorders`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setOrders(res.data);
@@ -27,7 +27,7 @@ const OrdersPage = () => {
 
   const seedMockOrders = async () => {
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/seed`, {}, {
+      await axios.post(`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/api/orders/seed`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchOrders();
