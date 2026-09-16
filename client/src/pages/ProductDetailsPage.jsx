@@ -26,16 +26,16 @@ const ProductDetailsPage = () => {
 
   useEffect(() => {
     fetchReviews();
-  }, [id]);
+  }, [id, fetchReviews]);
 
-  const fetchReviews = async () => {
+  const fetchReviews = React.useCallback(async () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/reviews/${id}`);
       setReviews(res.data);
     } catch (err) {
       console.error('Failed to fetch reviews', err);
     }
-  };
+  }, [id]);
 
   const submitReview = async (e) => {
     e.preventDefault();

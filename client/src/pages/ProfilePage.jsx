@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState({ name: '', email: '', password: '' });
 
   // Basic authentication check
   useEffect(() => {

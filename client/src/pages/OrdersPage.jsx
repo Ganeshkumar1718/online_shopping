@@ -10,9 +10,9 @@ const OrdersPage = () => {
 
   useEffect(() => {
     fetchOrders();
-  }, []);
+  }, [fetchOrders]);
 
-  const fetchOrders = async () => {
+  const fetchOrders = React.useCallback(async () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/orders/myorders`, {
         headers: { Authorization: `Bearer ${token}` }
@@ -23,7 +23,7 @@ const OrdersPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [token]);
 
   const seedMockOrders = async () => {
     try {
