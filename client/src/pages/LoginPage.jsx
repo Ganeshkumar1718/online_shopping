@@ -11,7 +11,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/api/auth/login`, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}/api/auth/login`, {
         email, password
       });
       localStorage.setItem('stylekart_token', res.data.token);

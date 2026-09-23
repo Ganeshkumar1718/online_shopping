@@ -71,7 +71,7 @@ const ProductListingPage = () => {
           name: "New Arrival!",
           price: price,
           oldPrice: getOldPrice(price, idCounter),
-          image: `${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/${prefix}${ext}`
+          image: `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}/uploads/${prefix}${ext}`
         });
       }
       return productsList;
@@ -91,7 +91,7 @@ const ProductListingPage = () => {
             name: "Top Sale!",
             price: price,
             oldPrice: getOldPrice(price, idCounter) + 500, // Huge discount for sale
-            image: `${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/${prefix}${i}${ext}`
+            image: `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}/uploads/${prefix}${i}${ext}`
           });
         }
       });
@@ -118,7 +118,7 @@ const ProductListingPage = () => {
           name: `${sub.charAt(0).toUpperCase() + sub.slice(1)}`,
           price: price,
           oldPrice: getOldPrice(price, idCounter),
-          image: `${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/uploads/${prefix}${i}${ext}`
+          image: `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}/uploads/${prefix}${i}${ext}`
         });
       }
     });

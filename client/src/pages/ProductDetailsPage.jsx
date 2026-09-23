@@ -30,7 +30,7 @@ const ProductDetailsPage = () => {
 
   const fetchReviews = React.useCallback(async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/api/reviews/${id}`);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}/api/reviews/${id}`);
       setReviews(res.data);
     } catch (err) {
       console.error('Failed to fetch reviews', err);
@@ -45,7 +45,7 @@ const ProductDetailsPage = () => {
     }
     
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}`}/api/reviews/${id}`, 
+      await axios.post(`${import.meta.env.VITE_API_URL || 'https://online-shopping-7fom.onrender.com'}/api/reviews/${id}`, 
         { rating, comment }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
