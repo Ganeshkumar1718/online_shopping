@@ -26,14 +26,17 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
         </Route>
 
-        {/* Protected Routes inside Main Layout */}
-        <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<MainLayout />}>
-            <Route index element={<HomePage />} />
-            <Route path="product/:id" element={<ProductDetailsPage />} />
-            <Route path="products/:category" element={<ProductListingPage />} />
-            <Route path="new-arrivals" element={<ProductListingPage />} />
-            <Route path="sale" element={<ProductListingPage />} />
+        {/* Main App Routes */}
+        <Route element={<MainLayout />}>
+          {/* Public Routes */}
+          <Route index element={<HomePage />} />
+          <Route path="product/:id" element={<ProductDetailsPage />} />
+          <Route path="products/:category" element={<ProductListingPage />} />
+          <Route path="new-arrivals" element={<ProductListingPage />} />
+          <Route path="sale" element={<ProductListingPage />} />
+          
+          {/* Protected Routes */}
+          <Route element={<ProtectedRoute />}>
             <Route path="profile" element={<ProfilePage />} />
             <Route path="orders" element={<OrdersPage />} />
             <Route path="orders/:id" element={<OrderDetailsPage />} />
